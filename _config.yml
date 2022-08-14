@@ -22,7 +22,7 @@ title: Testing
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Test.
-baseurl: "/W_I_Zr_Ds" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://bilal-a-g.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Bilal-A-G
 
