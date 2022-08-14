@@ -1,2 +1,2 @@
-# Testing
-GitHub pages site for documentation of the things I make
+# Home
+This site hosts all the documentation for my personal projects
