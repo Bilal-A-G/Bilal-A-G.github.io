@@ -62,10 +62,6 @@ aux_links:
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
 
-nav_external_links:
-  - title: W_I_Zr_Ds on GitHub
-    url: https://github.com/Bilal-A-G/W_I_Zr_Ds
-
 # Back to top link
 back_to_top: true
 back_to_top_text: "Back to top"
@@ -74,9 +70,14 @@ back_to_top_text: "Back to top"
 color_scheme: "dark"
 
 # Build settings
-theme: jekyll-theme-cayman
+remote_theme: just-the-docs/just-the-docs
 plugins:
   - jekyll-feed
+
+kramdown:
+syntax_highlighter_opts:
+  block:
+    line_numbers: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.
