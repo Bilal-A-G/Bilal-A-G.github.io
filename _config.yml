@@ -74,7 +74,7 @@ back_to_top_text: "Back to top"
 color_scheme: "dark"
 
 # Build settings
-theme: just-the-docs
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
 
