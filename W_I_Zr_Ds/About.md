@@ -9,6 +9,8 @@ permalink: /W_I_Zr_Ds/About
 ## Description
 W_I_Zr_Ds (Wizards) is a data-driven architecture solution for the Unity game engine that maximizes reusability, simplicity, and designer friendliness
 
+Inspired by / based off concepts from Ryan Hipple's 2017 Unite Talk and Unity's Open Project, Chop Chop
+
 ## Features
 - Custom hierarchical state machine implementation
 - Custom events - not Unity event based, for maximum performance
