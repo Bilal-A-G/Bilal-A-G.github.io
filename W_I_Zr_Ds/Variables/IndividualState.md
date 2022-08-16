@@ -73,7 +73,8 @@ With the monobehaviour anchor fully setup, you need to create a scriptable objec
 The GenericRuntimeVariable class is a base class that all variable scriptable objects with individual state must inherit from. It is used like so,
 
 ```c#
-[CreateAssetMenu(fileName = "", menuName = "Your/Menus/Here")]
+//It is recommended to layout your menus like so for organization purposes
+[CreateAssetMenu(fileName = "", menuName = "Modded Variables/Runtime Variables/Float Variable")]
 //Replace float with whatever type you want
 public class FloatRuntimeVariable : GenericRuntimeVariable<float>{}
 
