@@ -43,7 +43,7 @@ public class MyRuntimeVariables : MonoBehaviour, IRuntimeVariable
         typeof(MyRuntimeVariables).GetField(name).SetValue(this, value);
     }
 
-    //The only reason this isn't an abstract or soemthing is 
+    //The only reason this isn't an abstract or something is 
     //because of the type magic needed to get the field from a string
 }
 ```

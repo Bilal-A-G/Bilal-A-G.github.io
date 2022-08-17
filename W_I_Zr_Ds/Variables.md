@@ -16,6 +16,6 @@ Traditionally, all state had to be shared via global classes, or via direct refr
 This allows you to give anything access to any variable without having to architect your code in really complex ways.
 Moreover, you do this without any of the pitfalls of using a singleton/static class as the variables don't introduce unecessary coupling.
 
-For the purposes of organization, functions will be classified as a form of state
+For the purposes of organization, functions will be classified in this section as well
 
 
