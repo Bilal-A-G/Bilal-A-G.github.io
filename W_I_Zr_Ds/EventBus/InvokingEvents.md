@@ -39,7 +39,6 @@ It is important to ensure an event listener has the same calling object set as t
 For more information, see the sub-section above this.
 
 When invoking like this, it will be picked up by an event listener provided one exists with it's "Parent" set to the calling object. However, when doing this, you need to do control flow yourself to ensure that event should be invoked. For instance, you don't want to invoke a Shoot event when your character is reloading a gun.
----
 
 ## FSM Invocation
 If you need complex control flow, it is better to configure a state machine and then send the event to that instead of having the invoking class do it. Provided you have one configured, you can send an event to it like so,
