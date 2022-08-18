@@ -34,3 +34,8 @@ For more information about event invocation and calling objects visit the Invoki
 The is queuable option makes it so the event will queue on an FSM if the FSM is in a state where it won't propogate the event. If the FSM is then switched to a state where it can propogate the event, the event will be consumed as usual.
 
 For more information about FSMs, refer to the State Machines section
+
+### Dequeue Layer
+This option is only visible if you have Queueable turned on, it determines what state layer on the FSM the event will queue on. You can assign multiple layers to this if you want.
+
+For more information about state layers, refer to the State Machines section
