@@ -44,10 +44,10 @@ public class MyRuntimeVariables : MonoBehaviour, IRuntimeVariable
     }
 
     //The only reason this isn't an abstract or something is 
-    //because of the type magic needed to get the field from a string
+    //because of the type stuff needed to get the field from a string
 }
 ```
-After creating the monobehaviour anchor, attach it to a game object, and create a new entry for the game object, alongside a key of your choosing in a cached object wrapper (read the ```Non Individual State``` section for more information about those). You can do this like so,
+After creating the monobehaviour anchor, attach it to a game object, and create a new entry for the game object, alongside a key of your choosing in a cached object wrapper (read the ```Non Individual State``` section for more information).
 
 ```c#
 public class MyClass : MonoBehaviour

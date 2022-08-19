@@ -17,9 +17,7 @@ permalink: /W_I_Zr_Ds/Variables/CreateCustomVariables
 </details>
 
 ## Generic Variables
-The GenericVariable base class contains everything required to make a fully functioning variable scriptable object, however it is a generic and therefore requires the user to create custom, empty, classes to define new variables of a specific type.
-
-This can be done like so,
+The ```GenericVariable``` base class contains everything required to make a fully functioning variable scriptable object, however it is generic and therefore requires the user to create custom, empty, classes to define new variables of a specific type.
 
 ```c#
 //Make the type of the GenericVariable whatever you want, this example is for an audio clip variable
@@ -36,9 +34,9 @@ public class MyClass : MonoBehaviour
     public GenericReference<AudioClip> myClip
 }
 ```
-However, there are a few bugs in the inspector with this field. This is because it doesn't have a property drawer defining how the inspector should display it. Luckily, adding one is just as simple as making the variable.
+However, there are a few bugs with this field in the inspector. This is because there is no property drawer defining how the inspector should display it. Luckily, adding one is just as simple as making the variable.
 
-Note, if you want more infromation on editor scripting in W_I_Zr_Ds, visit the Editor Scripting sub-section in the API Refrence section
+Note, if you want more information about editor scripting in W_I_Zr_Ds, visit the ```Editor Scripting``` sub-section in the ```API Refrence``` section
 
 ```c#
 //Change the type of the GenericRefrence and GenericRefrenceDrawer to whatever you want
@@ -49,7 +47,7 @@ public class AudioClipDrawer : GenericReferenceDrawer<AudioClip>{}
 ---
 
 ## Variable Functions
-Variable functions are functions that return a value. They are interchangable with regular variables, provided the type matches with the generic refrences type. One can be made like so,
+Variable functions are functions that return a value. They are interchangable with regular variables, provided the type matches with the generic refrences type.
 
 ```c#
 //It is recommended to put variable functions in a seperate variables menu for organization purposes
@@ -76,6 +74,4 @@ public class MultiplyFloatByFloat : GenericValue<float>
 ```
 ---
 
-Note, variable functions can be chained together to allow for complex behaviour, for instance, here the baseValue field could be another MultiplyFloatByFloat variable function. 
-
-All variable functions should return a value as not doing so will cause a null refrence, if you want a function that doesn't return anything see the appropriate section for it.
+All variable functions should return a value in the ```GetValue``` function. Not doing so will cause a null refrence, if you want a function that doesn't return anything see the appropriate section for it.
