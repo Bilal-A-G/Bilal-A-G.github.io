@@ -2,7 +2,7 @@
 title: Variables
 parent: W_I_Zr_Ds
 has_children: true
-nav_order: 3
+nav_order: 2
 permalink: /W_I_Zr_Ds/Variables
 ---
 # Variables
