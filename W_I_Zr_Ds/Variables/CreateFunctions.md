@@ -17,7 +17,9 @@ permalink: /W_I_Zr_Ds/Variables/CreateFunctions
 </details>
 
 ## Actions
-Actions are scriptable object functions that do not return values. They are intended to be called via event listeners and all actions must inherit from the ActionBase class.
+```Actions``` are scriptable object functions that do not return values. They are intended to be called via event listeners. They are where the vast majority of gameplay logic should go. 
+
+They provide all the functionality of a regular function in c#, but they can be swapped out in the inspector and reused everywhere without needing any special architecture or rigid refrences.
 
 ```c#
 //It is recommended to put actions under the Events menu, 
@@ -33,6 +35,6 @@ public class MyAction : ActionBase
 }
 ```
 
-Actions are where the vast majority of gameplay logic should go. They provide all the functionality of a regular function in c#, but they can easily be swapped out in the inspector and reused everywhere without needing any special architecture or rigid refrences.
-
-For ways to use actions, see the EventListener sub-section in the Events section.
+For ways to use actions, see the ```EventListener``` sub-section in the ```Events``` section.
+{: .text-grey-dk-000}
+{: .fs-3 }

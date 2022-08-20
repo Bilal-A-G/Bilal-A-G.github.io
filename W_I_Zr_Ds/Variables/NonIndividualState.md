@@ -38,9 +38,10 @@ In order to get the value,
 myVariable.GetValue(new CachedObjectWrapper())
 ```
 
-For more information about ```CachedObjectWrapper``` keep reading. Also note, creating a new  ```CachedObjectWrapper``` every time you access the variable is very inefficient, this example is for demonstration purposes only.
+For more information about ```CachedObjectWrapper```s, keep reading. Also note, creating a new  wrapper every time you access the variable is very inefficient, this example is for demonstration purposes only.
+{: .text-grey-dk-000}
+{: .fs-3 }
 
-{: .pt-4 }
 You can use the inspector to set the value as well, when doing so you have two options,
 
 ### Use override true
@@ -60,7 +61,7 @@ To create a variable scriptable object, navigate to Assets > Create > Variables 
 
 ## Cached Object Wrappers
 
-Cached object wrappers are a dictionary with game objects in scene and a key to get each game object with. They also contain a helper function to get objects out from a specific key. They're defined in every event listener and allow scriptable object functions to have in scene refrences. 
+```CachedObjectWrapper```s are a dictionary with game objects in scene and a key to get each game object with. They also contain a helper function to get objects out from a specific key. They're defined in every event listener and allow scriptable object functions to have in scene refrences. 
 
 Due to how functions and variables are both children of the same parent class, both require a cached object wrapper to access their values.
 

@@ -36,7 +36,9 @@ public class MyClass : MonoBehaviour
 ```
 However, there are a few bugs with this field in the inspector. This is because there is no property drawer defining how the inspector should display it. Luckily, adding one is just as simple as making the variable.
 
-Note, if you want more information about editor scripting in W_I_Zr_Ds, visit the ```Editor Scripting``` sub-section in the ```API Refrence``` section
+For more information about editor scripting in W_I_Zr_Ds, visit the `Editor Scripting` sub-section in the `API Refrence` section
+{: .text-grey-dk-000}
+{: .fs-3 }
 
 ```c#
 //Change the type of the GenericRefrence and GenericRefrenceDrawer to whatever you want
@@ -47,7 +49,7 @@ public class AudioClipDrawer : GenericReferenceDrawer<AudioClip>{}
 ---
 
 ## Variable Functions
-Variable functions are functions that return a value. They are interchangable with regular variables, provided the type matches with the generic refrences type.
+Variable functions are functions that return a value. They are interchangable with regular variables, provided the type matches with the generic refrence's type.
 
 ```c#
 //It is recommended to put variable functions in a seperate variables menu for organization purposes
@@ -74,4 +76,4 @@ public class MultiplyFloatByFloat : GenericValue<float>
 ```
 ---
 
-All variable functions should return a value in the ```GetValue``` function. Not doing so will cause a null refrence, if you want a function that doesn't return anything see the appropriate section for it.
+All variable functions should return a value in the ```GetValue``` function. Not doing so will cause a null refrence, if you want a function that doesn't return anything see the appropriate sub-section for it.
