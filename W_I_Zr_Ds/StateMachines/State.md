@@ -17,25 +17,27 @@ permalink: /W_I_Zr_Ds/StateMachines/State
 </details>
 
 ## State Objects
-State objects are a specific state that a FSM layer can be in. They can be created the same way as any scriptable object, and are located under the FSM section of the create menu.
+State objects are scriptable objects and represent individual states a ```StateLayerObject``` can be in. They are just data containers, used by ```StateLayerObject```s to transition states and invoke events.
 
-State objects handle control flow by propogating events and transitioning themselves to other states in response to certain events.
+For more information on Events, see the ```Events``` and ```Invoking Events``` sub-sections in the ```Event Bus``` section.
+{: .text-grey-dk-000}
+{: .fs-3 }
 
-An event is propogated when it's invoked from the FSM, and thus registers on an event listener. However, when an event is not propogated, it either gets added to a queue, or gets propogated down, where the child state gets updated with the event. If after passing through every state later, it's still not responded to, it will be ignored.
-
-After creating one, there are a few options that needs to be set before it can be used,
+To create one, navigate to Assets > FSM > State Object
 
 ### On State Enter / On State Exit 
-The on state enter/exit fields determine what events will be propogated when the state is transitioned to or away from.
+The on state enter/exit fields determine what events will be invoked when the state is transitioned to or away from.
 
-### State Actions
-The state actions determine what events will be propogated by this state. Furthermore, there's an option to translate an event to another. So if you had a state that translated the run event to a jump event, the jump event will be propogated when the FSM is updated with the run event.
+### State Events
+The state events determine what events this state will respond to. If the ```StateLayerObject``` this state is attached to gets an ```UpdateState``` call with one of the events in this list, that event will be invoked by the  ```StateLayerObject```.
+
+Furthermore, there's an option to translate a state event to another event. So if you had a state that translated the run event to a jump event, the jump event will be invoked when the ```StateLayerObject``` gets an ```UpdateState``` call with the run event.
 
 ### State Transitions
-State transitions define when the state will transition to another and what it will transition to. It is a list of event-state pairs, where each event corresponds to a state to transition to. For instance, if there was an entry on the transitions list where the event was run and the state was running. If the state got updated with the run event, it will transition to the running state.
+State transitions define when the state will transition to another and what it will transition to. It is a list of event-state pairs, where each event corresponds to a state.
 
 ### State Child
-The state child is the state layer below this state. This is used to delegate events downwards.
+The state child is the ```StateLayerObject``` below this state. This is used to delegate ```UpdateState``` calls downwards.
 
 ---
 
