@@ -42,13 +42,39 @@ The state child is the ```StateLayerObject``` below this state. This is used to 
 ---
 
 ## State Layer Objects
-State layer objects are a layer containing mutually exclusive states. All state updates go to its current state. Whenever a state transitions to another, it's just changing the current state value on the state layer. All that's needed to configure one is to assign it a state object to act as a default state for that layer.
+State layer objects are containers that hold a current state value and can be updated with an ```UpdateState``` call. 
 
-When you pass a cached object wrapper to update the state, it's used in the state layer objects to access the current state generic refrence.
+```c#
+public class MyClass : MonoBehaviour
+{
+  public EventObject myEvent;
+  public GameObject callingObject;
+  public CachedObjectWrapper cachedObjects;
+  //You can call update state on a StateLayerObject or a FiniteStateMachine, both do the same thing
+  public StateLayerObject myLayer;
 
-For more information on cached object wrappers and generic refrences, visit the Variables section
+    void Start()
+    {
+      myLayer.UpdateState(myEvent, callingObject, cachedObjects)
+    }
+}
+```
+
+All state updates go to the current state. Whenever a state transitions to another, the current state changes.
+
+To create one, navigate to Assets > FSM > State Layer Object
+
+After creation, you need to set the current state value to a state you want to act as the initial state for that layer.
+
+When you pass a ```CachedObjectWrapper``` to update the state, it is used in the state layer object and all child state layer objects to access the current state ```GenericRefrence```.
+
+For more information on ```CachedObjectWrapper```s and ```GenericRefrence```s, visit the ```Non Individual State``` sub-section in the  ```Variables``` section
+{: .text-grey-dk-000}
+{: .fs-3 }
 
 ---
 
 ## Finite State Machines
-The finite state machine class is just a monobehaviour wrapper around a state layer object. What specific state layer object it wraps can be set in the inspector by changing its initial state property. These exist so you don't need to worry about accidentally dragging the wrong state layer object into your scripts that call events. 
+Finite state machines are just a monobehaviour wrapper around a state layer object. What specific state layer object it wraps can be set in the inspector by changing its initial state property. 
+
+They currently do not serve any particular purpose, but in the future they will visually display all states associated with it in a mermaid diagram, so they can be easily previewed.
