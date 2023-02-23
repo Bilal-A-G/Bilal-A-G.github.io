@@ -57,8 +57,6 @@ search:
 aux_links:
   "W_I_Zr_Ds on GitHub":
     - "//github.com/Bilal-A-G/W_I_Zr_Ds"
-  "NEXT 2023 Submission on Github":
-    - "//github.com/Bilal-A-G/NEXT-Submission-2023"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
